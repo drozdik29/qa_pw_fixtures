@@ -1,6 +1,6 @@
 import { faker } from '@faker-js/faker';
 
-export function generateNewUserData(logger) {
+export function generateNewUserData() {
   const firstName = faker.person.firstName();
   const lastName = faker.person.lastName();
 
@@ -9,8 +9,6 @@ export function generateNewUserData(logger) {
     email: faker.internet.email(),
     password: faker.internet.password(),
   };
-
-  logger.debug(`Generated new user: ${JSON.stringify(user)}`);
 
   return user;
 }

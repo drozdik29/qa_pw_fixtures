@@ -1,6 +1,6 @@
 import { faker } from '@faker-js/faker';
 
-export function generateNewArticleData(logger, tagNumber = 0) {
+export function generateNewArticleData(logger,tagNumber = 0) {
   const tags = Array.from({ length: tagNumber }, () => faker.lorem.word());
 
   const article = {
@@ -10,5 +10,6 @@ export function generateNewArticleData(logger, tagNumber = 0) {
     tags,
   };
 
+  logger.info(`New article generated: ${JSON.stringify(article)}`);
   return article;
 }
