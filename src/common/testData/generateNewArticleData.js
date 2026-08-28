@@ -10,6 +10,6 @@ export function generateNewArticleData(logger,tagNumber = 0) {
     tags,
   };
 
-  logger.info(`New article generated: ${article}`);
+  logger.debug(`New article generated: ${article}`);
   return article;
 }
