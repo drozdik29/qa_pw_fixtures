@@ -28,11 +28,11 @@ export const test = base.extend<
     async ({ logger }, use, testInfo) => {
       const fileName = testInfo.file.split(/[\\/]tests[\\/]/).pop();
 
-      logger.info(`Test started: ${fileName}`);
+      logger.debug(`Test started: ${fileName}`);
 
       await use('infoTestLog');
 
-      logger.info(`Test completed: ${fileName}`);
+      logger.debug(`Test completed: ${fileName}`);
     },
     { scope: 'test', auto: true },
   ],
